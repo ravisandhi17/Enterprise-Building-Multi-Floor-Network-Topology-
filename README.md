@@ -39,6 +39,9 @@ The lab simulates a three-floor enterprise building network connected through WA
 * SFSW (Second Floor Switch)
 * TFSW (Third Floor Switch)
 
+![IPCONFIG](screenshots/topology/SCOPE_FOR_DHCP.png)
+
+
 ---
 
 **Technologies Used**
@@ -57,13 +60,16 @@ The lab simulates a three-floor enterprise building network connected through WA
 
 **Network Topology**
 
-**Third Floor (TF) Networks**
+**First Floor (FF) Networks**
 
-| VLAN     | Purpose            | Network          |
-| -------- | ------------------ | ---------------- |
-| VLAN 10  | Department Network | 192.168.1.0/24   |
-| VLAN 20  | Department Network | 192.168.2.0/24   |
-| VLAN 110 | Wireless LAN       | 192.168.110.0/24 |
+| VLAN    | Purpose            | Network        |
+| ------- | ------------------ | -------------- |
+| VLAN 60 | Department Network | 192.168.6.0/24 |
+| VLAN 70 | Department Network | 192.168.7.0/24 |
+| VLAN 80 | Department Network | 192.168.8.0/24 |
+| VLAN 90 | Wireless LAN       | 192.168.9.0/24 |
+
+![TRUNK_FFSW](screenshots/vlan/TRUNK_FFSW.png)
 
 **Second Floor (SF) Networks**
 
@@ -74,14 +80,17 @@ The lab simulates a three-floor enterprise building network connected through WA
 | VLAN 50  | Department Network | 192.168.5.0/24   |
 | VLAN 100 | Wireless LAN       | 192.168.100.0/24 |
 
-**First Floor (FF) Networks**
+![TRUNK_SFSW](screenshots/vlan/TRUNK_SFSW.png)
 
-| VLAN    | Purpose            | Network        |
-| ------- | ------------------ | -------------- |
-| VLAN 60 | Department Network | 192.168.6.0/24 |
-| VLAN 70 | Department Network | 192.168.7.0/24 |
-| VLAN 80 | Department Network | 192.168.8.0/24 |
-| VLAN 90 | Wireless LAN       | 192.168.9.0/24 |
+**Third Floor (TF) Networks**
+
+| VLAN     | Purpose            | Network          |
+| -------- | ------------------ | ---------------- |
+| VLAN 10  | Department Network | 192.168.1.0/24   |
+| VLAN 20  | Department Network | 192.168.2.0/24   |
+| VLAN 110 | Wireless LAN       | 192.168.110.0/24 |
+
+![TRUNK_TFSW](screenshots/vlan/TRUNK_TFSW.png)
 
 ---
 
@@ -111,6 +120,18 @@ All routers participate in:
 * Full inter-site communication
 * Scalable enterprise routing design
 
+![OSPF_NEIGHBOR_FFROUTER](screenshots/ospf/OSPF_NEIGHBOR_FFROUTER.png)
+
+![ROUTING_TABLE_FFROUTER](screenshots/ospf/ROUTING_TABLE_FFROUTER.png)
+
+![OSPF_NEIGHBOR_SFROUTER](screenshots/ospf/OSPF_NEIGHBOR_SFROUTER.png)
+
+![ROUTING_TABLE_SFROUTER](screenshots/ospf/ROUTING_TABLE_SFROUTER.png)
+
+![OSPF_NEIGHBOR_TFROUTER](screenshots/ospf/OSPF_NEIGHBOR_TFROUTER.png)
+
+![ROUTING_TABLE_TFROUTER](screenshots/ospf/ROUTING_TABLE_TFROUTER.png)
+
 ---
 
 **Router-on-a-Stick Configuration**
@@ -122,6 +143,13 @@ interface GigabitEthernet0/0.10
 encapsulation dot1Q 10
  
 ip address 192.168.1.1 255.255.255.0
+
+![SUB_INT_FFROUTER](screenshots/roas/SUB_INT_FFROUTER.png)
+
+![SUB_INT_SFROUTER](screenshots/roas/SUB_INT_SFROUTER.png)
+
+![SUB_INT_TFROUTER](screenshots/roas/SUB_INT_TFROUTER.png)
+
 
 
 **Benefits**
@@ -144,6 +172,11 @@ network 192.168.1.0 255.255.255.0
 
 default-router 192.168.1.1
 
+![DHCP_BINDING_FFROUTER](screenshots/dhcp/DHCP_BINDING_FFROUTER.png)
+
+![DHCP_BINDING_SFROUTER](screenshots/dhcp/DHCP_BINDING_SFROUTER.png)
+
+![DHCP_BINDING_TFROUTER](screenshots/dhcp/DHCP_BINDING_TFROUTER.png)
 
 **Features**
 
@@ -169,6 +202,13 @@ login local
 
 transport input ssh
 
+![SSH_FFROUTER](screenshots/ssh/SSH_FFROUTER.png)
+
+![SSH_SFROUTER](screenshots/ssh/SSH_SFROUTER.png)
+
+![SSH_TFROUTER](screenshots/ssh/SSH_TFROUTER.png)
+
+
 
 ---
 
@@ -188,6 +228,11 @@ Port security is configured on TFSW.
 
 show port-security
 
+![PORT-SECURITY_SUMMARY](screenshots/port-security/PORT-SECURITY_SUMMARY.png)
+
+![PORT-SECURITY_F0-2](screenshots/port-security/PORT-SECURITY_F0-2.png)
+
+![PORT-SECURITY_F0-4](screenshots/port-security/PORT-SECURITY_F0-4.png)
 
 **Security Benefits**
 
@@ -254,10 +299,19 @@ show port-security
 **Connectivity Testing**
 
 
-ping
+ping 192.168.x.x
+
+![PING1](screenshots/ping/PING1.png)
+
+![PING2](screenshots/ping/PING2.png)
+
+![PING3](screenshots/ping/PING3.png)
 
 traceroute
 
+![TRACERT1](screenshots/tracert/TRACERT1.png)
+
+![TRACERT2](screenshots/tracert/TRACERT2.png)
 
 ---
 
