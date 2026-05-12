@@ -117,9 +117,6 @@ All routers participate in:
 
 Each router uses subinterfaces on GigabitEthernet0/0:
 
-Example:
-
-
 interface GigabitEthernet0/0.10
 
 encapsulation dot1Q 10
@@ -139,8 +136,7 @@ ip address 192.168.1.1 255.255.255.0
 
 Each router acts as a DHCP server for local VLANs.
 
-**Example DHCP Pool**
-
+**DHCP Pool**
 
 ip dhcp pool vlan10
 
@@ -166,9 +162,6 @@ SSH is configured on all routers.
 * Local username authentication
 * VTY line security
 * SSH-only remote access
-
-Example:
-
 
 line vty 0 4
 
@@ -282,9 +275,6 @@ traceroute
 * Network Troubleshooting
 
 ---
-
-
-
 
 **Future Improvements**
 
