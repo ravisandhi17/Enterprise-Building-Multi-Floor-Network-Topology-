@@ -277,30 +277,6 @@ traceroute
 
 ---
 
-**Project Structure**
-
-
-Enterprise-MultiFloor-Network-Lab/
-│
-├── README.md
-├── topology/
-│   └── network-topology.png
-├── configs/
-│   ├── TFROUTER.txt
-│   ├── SFROUTER.txt
-│   ├── FFROUTER.txt
-│   └── TFSW.txt
-├── screenshots/
-│   ├── ospf-neighbors.png
-│   ├── routing-table.png
-│   ├── dhcp-bindings.png
-│   ├── vlan-config.png
-│   └── port-security.png
-└── packet-tracer/
-    └── enterprise-network-lab.pkt
-
-
----
 
 **Suggested Screenshots for GitHub**
 
