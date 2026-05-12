@@ -365,4 +365,4 @@ Ravi Kumar
 
 **License**
 
-This project is for educational.
+This project is for educational purpose.
