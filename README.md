@@ -165,11 +165,11 @@ SSH is configured on all routers.
 
 Example:
 
-```bash
+
 line vty 0 4
  login local
  transport input ssh
-```
+
 
 ---
 
@@ -186,9 +186,9 @@ Port security is configured on TFSW.
 
 **Verification**
 
-```bash
+
 show port-security
-```
+
 
 **Security Benefits**
 
@@ -231,30 +231,30 @@ show ip ospf neighbor
 
 **VLAN Verification**
 
-```bash
+
 show vlan brief
 show interfaces trunk
-```
+
 
 **DHCP Verification**
 
-```bash
+
 show ip dhcp binding
 show ip dhcp pool
-```
+
 
 **Port Security Verification**
 
-```bash
+
 show port-security
-```
+
 
 **Connectivity Testing**
 
-```bash
+
 ping
 traceroute
-```
+
 
 ---
 
@@ -275,7 +275,7 @@ traceroute
 
 **Project Structure**
 
-```text
+
 Enterprise-MultiFloor-Network-Lab/
 │
 ├── README.md
@@ -294,7 +294,7 @@ Enterprise-MultiFloor-Network-Lab/
 │   └── port-security.png
 └── packet-tracer/
     └── enterprise-network-lab.pkt
-```
+
 
 ---
 
