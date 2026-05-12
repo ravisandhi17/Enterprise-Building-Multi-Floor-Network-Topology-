@@ -1,6 +1,6 @@
-# Enterprise Building Multi-Floor Network Topology Lab
+**Enterprise Building Multi-Floor Network Topology Lab**
 
-## Overview
+**Overview**
 
 This project demonstrates a multi-site enterprise network topology built in Cisco Packet Tracer using:
 
@@ -25,15 +25,15 @@ The lab simulates a three-floor enterprise building network connected through WA
 
 ---
 
-# Network Devices
+**Network Devices**
 
-## Routers
+**Routers**
 
 * FFROUTER (First Floor Router)
 * SFROUTER (Second Floor Router)
 * TFROUTER (Third Floor Router)
 
-## Switches
+**Switches**
 
 * FFSW (First Floor Switch)
 * SFSW (Second Floor Switch)
@@ -41,7 +41,7 @@ The lab simulates a three-floor enterprise building network connected through WA
 
 ---
 
-# Technologies Used
+**Technologies Used**
 
 * Cisco IOS 15.1
 * OSPF Area 0
@@ -55,9 +55,9 @@ The lab simulates a three-floor enterprise building network connected through WA
 
 ---
 
-# Network Topology
+**Network Topology**
 
-## Third Floor (TF) Networks
+**Third Floor (TF) Networks**
 
 | VLAN     | Purpose            | Network          |
 | -------- | ------------------ | ---------------- |
@@ -65,7 +65,7 @@ The lab simulates a three-floor enterprise building network connected through WA
 | VLAN 20  | Department Network | 192.168.2.0/24   |
 | VLAN 110 | Wireless LAN       | 192.168.110.0/24 |
 
-## Second Floor (SF) Networks
+**Second Floor (SF) Networks**
 
 | VLAN     | Purpose            | Network          |
 | -------- | ------------------ | ---------------- |
@@ -74,7 +74,7 @@ The lab simulates a three-floor enterprise building network connected through WA
 | VLAN 50  | Department Network | 192.168.5.0/24   |
 | VLAN 100 | Wireless LAN       | 192.168.100.0/24 |
 
-## First Floor (FF) Networks
+**First Floor (FF) Networks**
 
 | VLAN    | Purpose            | Network        |
 | ------- | ------------------ | -------------- |
@@ -85,7 +85,7 @@ The lab simulates a three-floor enterprise building network connected through WA
 
 ---
 
-# Inter-Floor WAN Connectivity
+**Inter-Floor WAN Connectivity**
 
 | Connection          | Network       |
 | ------------------- | ------------- |
@@ -95,16 +95,16 @@ The lab simulates a three-floor enterprise building network connected through WA
 
 ---
 
-# Routing Configuration
+**Routing Configuration**
 
-## OSPF
+**OSPF**
 
 All routers participate in:
 
 * OSPF Process ID: 1
 * Area: 0
 
-### Features
+**Features**
 
 * Dynamic route advertisement
 * Automatic route learning
@@ -113,7 +113,7 @@ All routers participate in:
 
 ---
 
-# Router-on-a-Stick Configuration
+**Router-on-a-Stick Configuration**
 
 Each router uses subinterfaces on GigabitEthernet0/0:
 
@@ -125,7 +125,7 @@ interface GigabitEthernet0/0.10
  ip address 192.168.1.1 255.255.255.0
 ```
 
-### Benefits
+**Benefits**
 
 * Inter-VLAN communication
 * VLAN traffic segmentation
@@ -133,11 +133,11 @@ interface GigabitEthernet0/0.10
 
 ---
 
-# DHCP Configuration
+**DHCP Configuration**
 
 Each router acts as a DHCP server for local VLANs.
 
-## Example DHCP Pool
+**Example DHCP Pool**
 
 ```bash
 ip dhcp pool vlan10
@@ -145,7 +145,7 @@ ip dhcp pool vlan10
  default-router 192.168.1.1
 ```
 
-### Features
+**Features**
 
 * Automatic IP assignment
 * Centralized network management
@@ -153,11 +153,11 @@ ip dhcp pool vlan10
 
 ---
 
-# SSH Remote Management
+**SSH Remote Management**
 
 SSH is configured on all routers.
 
-## Configuration Features
+**Configuration Features**
 
 * Local username authentication
 * VTY line security
@@ -173,24 +173,24 @@ line vty 0 4
 
 ---
 
-# Port Security
+**Port Security**
 
 Port security is configured on TFSW.
 
-## Secure Ports
+**Secure Ports**
 
 | Interface | Maximum MAC Addresses | Violation Action |
 | --------- | --------------------- | ---------------- |
 | Fa0/2     | 1                     | Shutdown         |
 | Fa0/4     | 1                     | Shutdown         |
 
-## Verification
+**Verification**
 
 ```bash
 show port-security
 ```
 
-### Security Benefits
+**Security Benefits**
 
 * Prevents unauthorized device connections
 * Protects against MAC flooding attacks
@@ -198,7 +198,7 @@ show port-security
 
 ---
 
-# Wireless Networks by Floor
+**Wireless Networks by Floor**
 
 | Router   | Wireless VLAN | Network          |
 | -------- | ------------- | ---------------- |
@@ -208,9 +208,9 @@ show port-security
 
 ---
 
-# Security Features
+**Security Features**
 
-## Implemented Security
+**Implemented Security**
 
 * Enable secret passwords
 * SSH remote access
@@ -220,36 +220,36 @@ show port-security
 
 ---
 
-# Verification Commands
+**Verification Commands**
 
-## Routing Verification
+**Routing Verification**
 
 ```bash
 show ip route
 show ip ospf neighbor
 ```
 
-## VLAN Verification
+**VLAN Verification**
 
 ```bash
 show vlan brief
 show interfaces trunk
 ```
 
-## DHCP Verification
+**DHCP Verification**
 
 ```bash
 show ip dhcp binding
 show ip dhcp pool
 ```
 
-## Port Security Verification
+**Port Security Verification**
 
 ```bash
 show port-security
 ```
 
-## Connectivity Testing
+**Connectivity Testing**
 
 ```bash
 ping
@@ -258,7 +258,7 @@ traceroute
 
 ---
 
-# Enterprise Networking Skills Demonstrated
+**Enterprise Networking Skills Demonstrated**
 
 * Enterprise Network Design
 * VLAN Configuration
@@ -273,7 +273,7 @@ traceroute
 
 ---
 
-# Project Structure
+**Project Structure**
 
 ```text
 Enterprise-MultiFloor-Network-Lab/
@@ -298,7 +298,7 @@ Enterprise-MultiFloor-Network-Lab/
 
 ---
 
-# Suggested Screenshots for GitHub
+**Suggested Screenshots for GitHub**
 
 Add screenshots of:
 
@@ -313,7 +313,7 @@ Add screenshots of:
 
 ---
 
-# Future Improvements
+**Future Improvements**
 
 Possible enhancements:
 
@@ -329,7 +329,7 @@ Possible enhancements:
 
 ---
 
-# Project Highlights
+**Project Highlights**
 
 * Multi-floor enterprise network simulation
 * VLAN-based traffic segmentation
@@ -344,12 +344,12 @@ Possible enhancements:
 
 ---
 
-# Author
+**Author**
 
 Ravi Kumar
 
 ---
 
-# License
+**License**
 
 This project is for educational and portfolio purposes.
