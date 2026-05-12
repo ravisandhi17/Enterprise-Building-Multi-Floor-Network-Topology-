@@ -119,11 +119,11 @@ Each router uses subinterfaces on GigabitEthernet0/0:
 
 Example:
 
-```bash
+
 interface GigabitEthernet0/0.10
  encapsulation dot1Q 10
  ip address 192.168.1.1 255.255.255.0
-```
+
 
 **Benefits**
 
@@ -139,11 +139,11 @@ Each router acts as a DHCP server for local VLANs.
 
 **Example DHCP Pool**
 
-```bash
+
 ip dhcp pool vlan10
  network 192.168.1.0 255.255.255.0
  default-router 192.168.1.1
-```
+
 
 **Features**
 
@@ -226,6 +226,7 @@ show port-security
 
 
 show ip route
+
 show ip ospf neighbor
 
 
@@ -233,6 +234,7 @@ show ip ospf neighbor
 
 
 show vlan brief
+
 show interfaces trunk
 
 
@@ -240,6 +242,7 @@ show interfaces trunk
 
 
 show ip dhcp binding
+
 show ip dhcp pool
 
 
@@ -253,6 +256,7 @@ show port-security
 
 
 ping
+
 traceroute
 
 
